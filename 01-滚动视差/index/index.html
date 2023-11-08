@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚动视差</title>
+  <style>
+    @import "../CSS/style.css";
+  </style>
+  <script type="text/javascript" src="../Script/jquery-3.5.1.min.js"></script>
+    <script>
+
+        $(function (){
+            let bg =$("#bg")
+            let moon =$("#moon")
+            let mountain =$("#mountain")
+            let road =$("#road")
+            let text =$("#text")
+
+        });
+
+
+        window.addEventListener('scroll',function (){
+            //窗口滑动值
+           var value = window.scrollY;
+           //可以用日志查看:console.log(value)
+           bg.style.top = value * 0.5 + 'px';
+           moon.style.left = -value * 0.5 + 'px';
+           mountain.style.top = -value * 0.15 + 'px';
+           road.style.top = value * 0.15 + 'px';
+           text.style.top = value * 1 + 'px';
+
+
+        });
+    </script>
+</head>
+<body>
+
+    <section>
+        <img src="../img/bg.jpg" id="bg">
+        <img src="../img/moon.png" id="moon">
+        <img src="../img/mountain.png" id="mountain">
+        <img src="../img/road.png" id="road">
+        <h2 id="text">Moon Light</h2>
+    </section>
+        <div>
+            <h1 style="color: white">
+                内容
+            </h1>
+        </div>
+        <div style="color: white">
+            其他内容
+        </div>
+</body>
+</html>
