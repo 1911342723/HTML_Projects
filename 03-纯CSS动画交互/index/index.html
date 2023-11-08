@@ -6,6 +6,21 @@
   <style>
     @import "../CSS/style.css";
   </style>
+    <script type="text/javascript" src="../Script/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            /*返回按钮*/
+           $(".btn").click(function (){
+              //添加事件
+               alert("这里还没写！")
+           });
+           /*Next按钮*/
+           $(".more").click(function (){
+               //添加事件
+                alert("这个事件也还没有写QWQ")
+           });
+        });
+    </script>
 </head>
 <body>
     <div class="wrap">
@@ -14,9 +29,19 @@
                 <span class="iconfont icon-caidan"></span>
             </div>
             <div class="logo">
-                <img src=" 可换logo图片 " alt=""/>
+                <img src="../img/logo.png" alt=""/>
             </div>
-            <div class="btn">Back</div>
+            <!--下拉框-->
+            <select class="select" >
+                <option class="option">More</option>
+                <option class="option">你好！</option>
+                <option class="option">我不好~</option>
+                <option class="option">你不好也要好!</option>
+                <option class="option">好好好</option>
+            </select>
+            <!--返回按钮-->
+            <button class="btn">Back</button>
+
 
         </div>
         <div class="content">
@@ -26,9 +51,8 @@
             <h1>终不似</h1>
             <h1>少年游</h1>
             <h2>By:一只好鼠鼠</h2>
-            <div class="more">Look ahead</div>
+            <button class="more">Next</button>
             <div class="page">
-                <span class="iconfont icon-anniu-jiantouxiangyou_o"></span>
                 <span>2022-2023</span>
             </div>
                 </div>
@@ -37,7 +61,7 @@
                 <div class="slogan">
                     <h1>Today</h1>
                     <h1>How are your feeling?</h1>
-                    <div class="more">Look ahead</div>
+                    <div class="more">Next</div>
                 </div>
                 <!--视频可替换-->
                 <video src="../Video/bg.mp4"
