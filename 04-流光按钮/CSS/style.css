@@ -1,0 +1,68 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+#btn{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    background: skyblue;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+
+}
+#btn{/*设置渐变背景*/
+    text-decoration: none;/*取消下划线*/
+    background: linear-gradient(90deg,
+    #03a9f4,
+    #f441a5,
+    #ffeb3b,
+    #03a9f4
+    );
+    background-size: 400%;
+    border-radius: 20px;
+}
+/*设置流光动画*/
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 400% 0;
+    }
+}
+/*悬停使用动画*/
+#btn:hover{
+    animation: animate 8s linear infinite;
+}
+/*添加光影，准备盒子*/
+#btn:before{
+    content: '';
+    position: absolute;
+    left: -5px;
+    top:-5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,
+        #03a9f4,
+        #f441a5,
+        #ffeb3b,
+        #03a9f4
+    );
+    background-size: 400%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 1s;
+}
+/*光影盒子的悬停动画*/
+ #btn:hover:before{
+     filter: blur(20px);
+     opacity: 1;
+ }
